@@ -1,0 +1,10 @@
+img {
+    width:auto;
+}
+
+.profile {
+    border-radius: 100%;
+    left: 25em;
+    width: 10em;
+    position: absolute;
+}
