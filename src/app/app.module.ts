@@ -12,7 +12,7 @@ import { PresentationComponent } from './components/presentation/presentation.co
     AppComponent,
     HeaderComponent,
     LoginComponent,
-    PresentationComponent
+    PresentationComponent,
   ],
   imports: [
     BrowserModule,

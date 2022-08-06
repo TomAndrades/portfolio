@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PresentationComponent implements OnInit {
   name: string = "Tomás Andrades";
-  profile: string = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80";
+  profile: string = "https://www.incluyeme.com/wp-content/uploads/2021/12/portrait-square-03.jpg";
   portrait: string = "https://i.pinimg.com/originals/09/01/43/0901434384290893f3f67b1065855d60.gif";
   constructor() { }
 
