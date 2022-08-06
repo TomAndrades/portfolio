@@ -1,10 +1,29 @@
-img {
-    width:auto;
+.mat-card{
+    border-radius: 32px;
+    border-color: rgb(255, 221, 109);
+    border-width: 4px;
 }
 
-.profile {
-    border-radius: 100%;
-    left: 25em;
-    width: 10em;
-    position: absolute;
+img.mask {
+    background-color: aliceblue;
+    height: 400px;
+    background-image: url(https://i.pinimg.com/originals/09/01/43/0901434384290893f3f67b1065855d60.gif);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    min-width: auto;
+}
+c
+
+.profile-image {
+    outline: auto;
+    outline-width: 10px;
+    border-radius: 50%;
+    width:40%;
+    max-width: 200px;
+    outline-color: rgb(255, 221, 109);
+    margin: auto;
+    display: block;
+    margin-top: -10em;
 }
