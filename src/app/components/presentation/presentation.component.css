@@ -1,4 +1,4 @@
-.mat-card{
+.mat-card {
     border-radius: 32px;
     border-color: rgb(255, 221, 109);
     border-width: 4px;
@@ -20,7 +20,7 @@ img.mask {
     outline: auto;
     outline-width: 10px;
     border-radius: 50%;
-    width:40%;
+    width: 40%;
     max-width: 200px;
     outline-color: rgb(255, 221, 109);
     margin: auto;
