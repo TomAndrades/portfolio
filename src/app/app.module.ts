@@ -6,6 +6,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoginComponent } from './components/login/login.component';
 import { PresentationComponent } from './components/presentation/presentation.component';
+import { ExperienciasComponent } from './components/experiencias/experiencias.component';
+import { AddButtonComponent } from './components/add-button/add-button.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +15,8 @@ import { PresentationComponent } from './components/presentation/presentation.co
     HeaderComponent,
     LoginComponent,
     PresentationComponent,
+    ExperienciasComponent,
+    AddButtonComponent,
   ],
   imports: [
     BrowserModule,
