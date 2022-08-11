@@ -7,7 +7,6 @@ export const EXPERIENCIAS: Experiencia[] = [
         nombreEmpresa: "Fermi Componentes Electronicos",
         esTrabajoActual: true,
         fechaInicio: new Date(10 / 3 / 2021),
-        fechaFin: new Date(),
         descripcion: "Instalador Electrico"
     },
     {
