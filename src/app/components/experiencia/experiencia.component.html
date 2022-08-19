@@ -1,7 +1,15 @@
-<div *ngFor="let experiencia of experiencias" class="card mat-card">
-  <div class="card-title">
-    <h3>{{ experiencia.nombreEmpresa }}</h3>
-    <h2>{{ experiencia.fechaInicio }}</h2>
-  </div>
-  <div class="card-body">{{ experiencia.descripcion }}</div>
+<div *ngFor="let experiencia of experiencias">
+  <h4>{{ experiencia.nombreEmpresa }}</h4>
+  <h6 *ngIf="experiencia.esTrabajoActual; else elseBlock">
+    {{ experiencia.fechaInicio | date: "MM/yyyy" }} - Actualmente
+  </h6>
+  <ng-template #elseBlock>
+    <h6>
+      {{ experiencia.fechaInicio | date: "MM/yyyy" }} -
+      {{ experiencia.fechaFin | date: "MM/yyyy" }}
+    </h6>
+  </ng-template>
+  <p>
+    {{ experiencia.descripcion }}
+  </p>
 </div>
