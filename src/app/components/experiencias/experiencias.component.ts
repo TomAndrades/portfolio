@@ -13,7 +13,7 @@ export class ExperienciasComponent implements OnInit {
   }
 
   toggleAddExperience() {
-    console.log("Emited");
+    console.log("Agregar experiencia");
   }
 
 }
