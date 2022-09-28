@@ -1,0 +1,22 @@
+<div
+  *ngFor="let tec of tecnologias; let indice = index"
+  class="col-sm border border-warning rounded-5 p-5"
+>
+  <div class="">
+    <fa-icon [icon]="fa.{{tec.nombreTecnologia}}" size="5x"></fa-icon>
+  </div>
+  <div class="progress">
+    <div
+      class="progress-bar"
+      role="progressbar"
+      aria-label="Example with label"
+      aria-valuenow="tec.porcentaje"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    >
+      {{ tec.id }}
+      {{ tec.nombreTecnologia }}
+      {{ tec.porcentaje }}
+    </div>
+  </div>
+</div>

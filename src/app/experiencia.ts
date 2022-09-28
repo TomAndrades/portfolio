@@ -7,3 +7,11 @@ export interface Experiencia {
     fechaFin?: Date,
     descripcion: string
 }
+
+export interface Tecnologia {
+
+    id?: number,
+    nombreTecnologia: string,
+    porcentaje: number
+
+}

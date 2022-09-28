@@ -1,4 +1,4 @@
-import { Experiencia } from "./experiencia"
+import { Experiencia, Tecnologia } from "./experiencia"
 
 export const EXPERIENCIAS: Experiencia[] = [
     {
@@ -26,5 +26,23 @@ export const EXPERIENCIAS: Experiencia[] = [
         fechaInicio: new Date("10/10/2018"),
         fechaFin: new Date("10/03/2019"),
         descripcion: "Operario"
+    }
+]
+
+export const TECNOLOGIAS: Tecnologia[] = [
+    {
+        id: 1,
+        nombreTecnologia: "js",
+        porcentaje: 60
+    },
+    {
+        id: 2,
+        nombreTecnologia: "html",
+        porcentaje: 100
+    },
+    {
+        id: 3,
+        nombreTecnologia: "css",
+        porcentaje: 50
     }
 ]
