@@ -1,3 +1,5 @@
+import { IconProp } from "@fortawesome/fontawesome-svg-core"
+
 export interface Experiencia {
 
     id?: number,
@@ -11,7 +13,7 @@ export interface Experiencia {
 export interface Tecnologia {
 
     id?: number,
-    nombreTecnologia: string,
+    nombreTecnologia: IconProp,
     porcentaje: number
 
 }

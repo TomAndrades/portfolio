@@ -1,4 +1,6 @@
 import { Experiencia, Tecnologia } from "./experiencia"
+import { IconProp } from "@fortawesome/fontawesome-svg-core"
+import { faCss3Alt, faHtml5, faJs } from "@fortawesome/free-brands-svg-icons"
 
 export const EXPERIENCIAS: Experiencia[] = [
     {
@@ -32,17 +34,17 @@ export const EXPERIENCIAS: Experiencia[] = [
 export const TECNOLOGIAS: Tecnologia[] = [
     {
         id: 1,
-        nombreTecnologia: "js",
-        porcentaje: 60
+        nombreTecnologia: faJs,
+        porcentaje: 25
     },
     {
         id: 2,
-        nombreTecnologia: "html",
+        nombreTecnologia: faHtml5,
         porcentaje: 100
     },
     {
         id: 3,
-        nombreTecnologia: "css",
-        porcentaje: 50
+        nombreTecnologia: faCss3Alt,
+        porcentaje: 75
     }
 ]

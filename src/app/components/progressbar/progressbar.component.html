@@ -3,20 +3,19 @@
   class="col-sm border border-warning rounded-5 p-5"
 >
   <div class="">
-    <fa-icon [icon]="fa.{{tec.nombreTecnologia}}" size="5x"></fa-icon>
+    <fa-icon [icon]="tec.nombreTecnologia" size="4x"></fa-icon>
+    <!-- <i [ngClass]="'fab' + ' fa-' + '{{tec.nombreTecnologia | string }}'"></i> -->
   </div>
   <div class="progress">
     <div
       class="progress-bar"
       role="progressbar"
+      [style.width.%]="tec.porcentaje"
+      [innerText]="tec.porcentaje + '%'"
       aria-label="Example with label"
       aria-valuenow="tec.porcentaje"
       aria-valuemin="0"
       aria-valuemax="100"
-    >
-      {{ tec.id }}
-      {{ tec.nombreTecnologia }}
-      {{ tec.porcentaje }}
-    </div>
+    ></div>
   </div>
 </div>
