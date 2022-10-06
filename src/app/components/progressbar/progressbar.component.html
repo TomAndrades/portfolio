@@ -1,21 +1,21 @@
 <div
   *ngFor="let tec of tecnologias; let indice = index"
-  class="col-sm border border-warning rounded-5 p-5"
+  class="border border-warning rounded-5 p-5 d-inline-flex"
 >
-  <div class="">
+  <div class="flex-grow-2">
     <fa-icon [icon]="tec.nombreTecnologia" size="4x"></fa-icon>
-    <!-- <i [ngClass]="'fab' + ' fa-' + '{{tec.nombreTecnologia | string }}'"></i> -->
-  </div>
-  <div class="progress">
-    <div
-      class="progress-bar"
-      role="progressbar"
-      [style.width.%]="tec.porcentaje"
-      [innerText]="tec.porcentaje + '%'"
-      aria-label="Example with label"
-      aria-valuenow="tec.porcentaje"
-      aria-valuemin="0"
-      aria-valuemax="100"
-    ></div>
+
+    <div class="progress">
+      <div
+        class="progress-bar"
+        role="progressbar"
+        [style.width.%]="tec.porcentaje"
+        [innerText]="tec.porcentaje + '%'"
+        aria-label="Example with label"
+        aria-valuenow="tec.porcentaje"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      ></div>
+    </div>
   </div>
 </div>
