@@ -12,6 +12,8 @@ import { EducacionComponent } from './components/educacion/educacion.component';
 import { EstudioComponent } from './components/estudio/estudio.component';
 import { HysComponent } from './components/hys/hys.component';
 import { ProgressbarComponent } from './components/progressbar/progressbar.component';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { ProyectoComponent } from './components/proyecto/proyecto.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { ProgressbarComponent } from './components/progressbar/progressbar.compo
     EstudioComponent,
     HysComponent,
     ProgressbarComponent,
+    ProyectosComponent,
+    ProyectoComponent,
   ],
   imports: [
     BrowserModule,
