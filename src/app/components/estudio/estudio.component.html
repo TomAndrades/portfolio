@@ -1,21 +1,21 @@
-<!-- <div *ngFor="let estudio of estudios">
-  <h4>{{ estudio.nombreEmpresa }}</h4>
-  <h6 *ngIf="estudio.esTrabajoActual; else elseBlock">
-    {{ estudio.fechaInicio | date: "MM/yyyy" }} - Actualmente
+<div *ngFor="let estudio of estudios">
+  <h4>{{ estudio.nombreInstituto }}</h4>
+  <h6 *ngIf="estudio.cursandoActualmente; else elseBlock">
+    {{ estudio.fechaInicio | date: "d/MM/yyyy" }} - Actualmente
   </h6>
   <ng-template #elseBlock>
     <h6>
-      {{ estudio.fechaInicio | date: "MM/yyyy" }} -
-      {{ estudio.fechaFin | date: "MM/yyyy" }}
+      {{ estudio.fechaInicio | date: "d/MM/yyyy" }} -
+      {{ estudio.fechaFin | date: "d/MM/yyyy" }}
     </h6>
   </ng-template>
   <p>
     {{ estudio.descripcion }}
   </p>
-</div> -->
+</div>
 
-<div *ngFor="let i of [1, 2, 3, 4]">
+<!-- <div *ngFor="let i of [1, 2, 3, 4]">
   <h4>Estudio {{ i }}</h4>
   <h6>Fechas</h6>
   <p>Descripcion estudio numero {{ i }}</p>
-</div>
+</div> -->

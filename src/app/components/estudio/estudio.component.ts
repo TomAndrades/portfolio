@@ -1,7 +1,6 @@
-import { JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-// import { ESTUDIOS } from 'src/app/mock-estudios';
-// import { Estudio } from 'src/app/estudio';
+import { ExperienciasService } from '../../services/experiencias.service';
+import { Estudio } from '../../experiencia';
 
 @Component({
   selector: 'app-estudio',
@@ -9,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./estudio.component.css']
 })
 export class EstudioComponent implements OnInit {
-  // estudios: Estudios[] = ESTUDIOS;
+  estudios: Estudio[] = [];
 
-  constructor() { }
+  constructor(
+    private experienciaService: ExperienciasService
+  ) { }
 
   ngOnInit(): void {
+    this.experienciaService.getEstudios().subscribe((estudios) => (this.estudios = estudios))
   }
 
 }

@@ -1,12 +1,12 @@
 <div *ngFor="let experiencia of experiencias">
   <h4>{{ experiencia.nombreEmpresa }}</h4>
   <h6 *ngIf="experiencia.esTrabajoActual; else elseBlock">
-    {{ experiencia.fechaInicio | date: "MM/yyyy" }} - Actualmente
+    {{ experiencia.fechaInicio | date: "d/MM/yyyy" }} - Actualmente
   </h6>
   <ng-template #elseBlock>
     <h6>
-      {{ experiencia.fechaInicio | date: "MM/yyyy" }} -
-      {{ experiencia.fechaFin | date: "MM/yyyy" }}
+      {{ experiencia.fechaInicio | date: "d/MM/yyyy" }} -
+      {{ experiencia.fechaFin | date: "d/MM/yyyy" }}
     </h6>
   </ng-template>
   <p>

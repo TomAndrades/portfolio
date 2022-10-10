@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Tecnologia } from 'src/app/experiencia';
-import { TECNOLOGIAS } from 'src/app/mock-experiencias';
-
+import { ExperienciasService } from 'src/app/services/experiencias.service';
 @Component({
   selector: 'app-progressbar',
   templateUrl: './progressbar.component.html',
@@ -9,13 +8,15 @@ import { TECNOLOGIAS } from 'src/app/mock-experiencias';
 })
 export class ProgressbarComponent implements OnInit {
 
-  tecnologias: Tecnologia[] = TECNOLOGIAS;
+  tecnologias: Tecnologia[] = [];
 
-  constructor() {
+  constructor(private experienciaService: ExperienciasService) {
 
   }
 
   ngOnInit(): void {
+    this.experienciaService.getTecnologias().subscribe((tecnologias) => (
+      this.tecnologias = tecnologias))
   }
 
 }

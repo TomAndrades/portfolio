@@ -1,0 +1,69 @@
+{
+    "experiencias":[
+        {
+
+            "id": 1,
+            "nombreEmpresa": "Fermi Componentes Electronicos",
+            "esTrabajoActual": true,
+            "fechaInicio": "10/04/2022",
+            "descripcion": "Instalador Electrico"
+        },
+        {
+    
+            "id": 2,
+            "nombreEmpresa": "VECO",
+            "esTrabajoActual": false,
+            "fechaInicio": "10/3/2022",
+            "fechaFin": "10/4/2022",
+            "descripcion": "Operario Tecnico Electromecanico"
+        },
+        {
+    
+            "id": 3,
+            "nombreEmpresa": "Back Srl",
+            "esTrabajoActual": false,
+            "fechaInicio": "10/10/2018",
+            "fechaFin": "10/4/2019",
+            "descripcion": "Operario"
+        }
+    ],
+
+
+    "estudios":[
+        {
+
+            "id": 1,
+            "nombreInstituto": "UNGS",
+            "cursandoActualmente": true,
+            "fechaInicio": "10/04/2022",
+            "descripcion": "Ingenieria Electromecanica"
+        },
+        {
+    
+            "id": 2,
+            "nombreEmpresa": "Argentina Programa #YoProgramo",
+            "esTrabajoActual": false,
+            "fechaInicio": "1/3/2022",
+            "fechaFin": "31/10/2022",
+            "descripcion": "Desarrollador Full Stack"
+        }
+    ],
+
+    "tecnologias": [
+        {
+            "id": 1,
+            "nombreTecnologia": "js",
+            "porcentaje": 25
+        },
+        {
+            "id": 2,
+            "nombreTecnologia": "html5",
+            "porcentaje": 100
+        },
+        {
+            "id": 3,
+            "nombreTecnologia": "css3-alt",
+            "porcentaje": 75
+        }
+    ]
+}
