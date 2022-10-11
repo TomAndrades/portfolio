@@ -1,4 +1,5 @@
-import { IconProp, IconName } from "@fortawesome/fontawesome-svg-core"
+import { IconProp, IconName, text } from "@fortawesome/fontawesome-svg-core"
+
 
 export interface Experiencia {
 
@@ -9,7 +10,6 @@ export interface Experiencia {
     fechaFin?: Date,
     descripcion: string
 }
-
 
 export interface Estudio {
 
@@ -26,5 +26,15 @@ export interface Tecnologia {
     id?: number,
     nombreTecnologia: IconName,
     porcentaje: number
+
+}
+
+export interface Proyecto {
+
+    id?: number,
+    nombreProyecto: string,
+    descripcion: string,
+    urlProyecto: string,
+    imgProyecto: string
 
 }

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHandler } from "@angular/common/http"
 import { Observable, of } from 'rxjs';
-import { Experiencia, Estudio, Tecnologia } from '../experiencia';
+import { Experiencia, Estudio, Tecnologia, Proyecto } from '../experiencia';
 @Injectable({
   providedIn: 'root'
 })
@@ -9,7 +9,7 @@ export class ExperienciasService {
   private expUrl = "http://localhost:5000/experiencias"
   private estUrl = "http://localhost:5000/estudios"
   private tecUrl = "http://localhost:5000/tecnologias"
-
+  private proUrl = "http://localhost:5000/proyectos"
   constructor(
     private http: HttpClient
   ) { }
@@ -25,5 +25,9 @@ export class ExperienciasService {
 
   getTecnologias(): Observable<Tecnologia[]> {
     return this.http.get<Tecnologia[]>(this.tecUrl)
+  }
+
+  getProyectos(): Observable<Proyecto[]> {
+    return this.http.get<Proyecto[]>(this.proUrl)
   }
 }
