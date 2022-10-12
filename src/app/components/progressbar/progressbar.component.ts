@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Tecnologia } from 'src/app/experiencia';
-import { ExperienciasService } from 'src/app/services/experiencias.service';
+import { Tecnologia } from 'src/app/interfaces';
+import { DbmanagerService } from 'src/app/services/dbmanager.service';
 @Component({
   selector: 'app-progressbar',
   templateUrl: './progressbar.component.html',
@@ -10,12 +10,12 @@ export class ProgressbarComponent implements OnInit {
 
   tecnologias: Tecnologia[] = [];
 
-  constructor(private experienciaService: ExperienciasService) {
+  constructor(private dbmanagerService: DbmanagerService) {
 
   }
 
   ngOnInit(): void {
-    this.experienciaService.getTecnologias().subscribe((tecnologias) => (
+    this.dbmanagerService.getTecnologias().subscribe((tecnologias) => (
       this.tecnologias = tecnologias))
   }
 

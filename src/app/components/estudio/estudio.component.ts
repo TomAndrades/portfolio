@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ExperienciasService } from '../../services/experiencias.service';
-import { Estudio } from '../../experiencia';
+import { DbmanagerService } from '../../services/dbmanager.service';
+import { Estudio } from '../../interfaces';
 
 @Component({
   selector: 'app-estudio',
@@ -11,7 +11,7 @@ export class EstudioComponent implements OnInit {
   estudios: Estudio[] = [];
 
   constructor(
-    private experienciaService: ExperienciasService
+    private experienciaService: DbmanagerService
   ) { }
 
   ngOnInit(): void {

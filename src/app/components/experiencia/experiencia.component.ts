@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ExperienciasService } from '../../services/experiencias.service';
-import { Experiencia } from '../../experiencia';
+import { DbmanagerService } from '../../services/dbmanager.service';
+import { Experiencia } from '../../interfaces';
 
 @Component({
   selector: 'app-experiencia',
@@ -11,11 +11,11 @@ export class ExperienciaComponent implements OnInit {
   experiencias: Experiencia[] = [];
 
   constructor(
-    private experienciaService: ExperienciasService
+    private dbmanagerService: DbmanagerService
   ) { }
 
   ngOnInit(): void {
-    this.experienciaService.getExperiencias().subscribe((experiencias) => (
+    this.dbmanagerService.getExperiencias().subscribe((experiencias) => (
       this.experiencias = experiencias));
   }
 

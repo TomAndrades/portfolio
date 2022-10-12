@@ -1,4 +1,4 @@
-import { IconProp, IconName, text } from "@fortawesome/fontawesome-svg-core"
+import { IconProp, IconName } from "@fortawesome/fontawesome-svg-core"
 
 
 export interface Experiencia {

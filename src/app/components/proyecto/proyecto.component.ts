@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Proyecto } from 'src/app/experiencia';
-import { ExperienciasService } from 'src/app/services/experiencias.service';
+import { Proyecto } from 'src/app/interfaces';
+import { DbmanagerService } from 'src/app/services/dbmanager.service';
 
 @Component({
   selector: 'app-proyecto',
@@ -10,10 +10,10 @@ import { ExperienciasService } from 'src/app/services/experiencias.service';
 export class ProyectoComponent implements OnInit {
   proyectos: Proyecto[] = [];
   show = true;
-  constructor(private experienciaService: ExperienciasService) { }
+  constructor(private dbmanagerService: DbmanagerService) { }
 
   ngOnInit(): void {
-    this.experienciaService.getProyectos().subscribe((proyectos) => (
+    this.dbmanagerService.getProyectos().subscribe((proyectos) => (
       this.proyectos = proyectos));
   }
 
