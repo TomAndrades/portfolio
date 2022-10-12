@@ -19,4 +19,10 @@ export class ExperienciaComponent implements OnInit {
       this.experiencias = experiencias));
   }
 
+  deleteExperiencia(experiencia: Experiencia) {
+    this.dbmanagerService.deleteExperiencia(experiencia).subscribe(() => (
+      this.experiencias = this.experiencias.filter(t => t.id !== experiencia.id)
+    ))
+  }
+
 }
