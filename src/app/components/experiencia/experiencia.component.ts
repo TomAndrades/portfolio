@@ -1,28 +1,30 @@
-import { Component, OnInit } from '@angular/core';
-import { DbmanagerService } from '../../services/dbmanager.service';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Experiencia } from '../../interfaces';
+
 
 @Component({
   selector: 'app-experiencia',
   templateUrl: './experiencia.component.html',
   styleUrls: ['./experiencia.component.css']
 })
-export class ExperienciaComponent implements OnInit {
-  experiencias: Experiencia[] = [];
 
-  constructor(
-    private dbmanagerService: DbmanagerService
-  ) { }
+export class ExperienciaComponent implements OnInit {
+
+  @Input() item: Experiencia = { id: 1, nombreEmpresa: 'a', fechaInicio: new Date(), fechaFin: new Date(), esTrabajoActual: true, descripcion: '' };
+  @Output() onDeleteExperiencia: EventEmitter<Experiencia> = new EventEmitter()
+
+  constructor() { }
 
   ngOnInit(): void {
-    this.dbmanagerService.getExperiencias().subscribe((experiencias) => (
-      this.experiencias = experiencias));
   }
 
-  deleteExperiencia(experiencia: Experiencia) {
-    this.dbmanagerService.deleteExperiencia(experiencia).subscribe(() => (
-      this.experiencias = this.experiencias.filter(t => t.id !== experiencia.id)
-    ))
+  onEdit(item: Experiencia) {
+    console.log(item);
+  };
+
+  onDelete(item: Experiencia) {
+    this.onDeleteExperiencia.emit(item);
   }
+
 
 }

@@ -1,101 +1,95 @@
 {
-    "experiencias":[
-        {
+  "experiencias":[
+    {
 
-            "id": 1,
-            "nombreEmpresa": "Fermi Componentes Electronicos",
-            "esTrabajoActual": true,
-            "fechaInicio": "10/04/2022",
-            "descripcion": "Instalador Electrico"
-        },
-        {
-    
-            "id": 2,
-            "nombreEmpresa": "VECO",
-            "esTrabajoActual": false,
-            "fechaInicio": "10/3/2022",
-            "fechaFin": "10/4/2022",
-            "descripcion": "Operario Tecnico Electromecanico"
-        },
-        {
-    
-            "id": 3,
-            "nombreEmpresa": "Back Srl",
-            "esTrabajoActual": false,
-            "fechaInicio": "10/10/2018",
-            "fechaFin": "10/4/2019",
-            "descripcion": "Operario"
-        }
-    ],
+        "id": 1,
+        "nombreEmpresa": "Fermi Componentes Electronicos",
+        "esTrabajoActual": true,
+        "fechaInicio": "10/04/2022",
+        "descripcion": "Instalador Electrico"
+    },
+    {
 
+        "id": 2,
+        "nombreEmpresa": "VECO",
+        "esTrabajoActual": false,
+        "fechaInicio": "10/3/2022",
+        "fechaFin": "10/4/2022",
+        "descripcion": "Operario Tecnico Electromecanico"
+    },
+    {
 
-    "estudios":[
-        {
-
-            "id": 1,
-            "nombreInstituto": "UNGS",
-            "cursandoActualmente": true,
-            "fechaInicio": "10/10/2018",
-            "descripcion": "Ingenieria Electromecanica"
-        },
-        {
-    
-            "id": 2,
-            "nombreInstituto": "Argentina Programa #YoProgramo",
-            "cursandoActualmente": false,
-            "fechaInicio": "1/04/2018",
-            "fechaFin": "10/10/2018",
-            "descripcion": "Desarrollador Full Stack"
-        },
-        {
-    
-            "id": 3,
-            "nombreInstituto": "Fundamentos de la Programacion",
-            "cursandoActualmente": false,
-            "fechaInicio": "10/10/2018",
-            "fechaFin": "10/10/2018",
-            "descripcion": "UTN"
-        }
-    ],
-
-    "tecnologias": [
-        {
-            "id": 1,
-            "nombreTecnologia": "js",
-            "porcentaje": 25
-        },
-        {
-            "id": 2,
-            "nombreTecnologia": "html5",
-            "porcentaje": 100
-        },
-        {
-            "id": 3,
-            "nombreTecnologia": "css3-alt",
-            "porcentaje": 75
-        }
-    ],
-    "proyectos": [
-        {
-            "id": 1,
-            "nombreProyecto": "Portfolio",
-            "descripcion": "Descripcion de Portfolio",
-            "urlProyecto": "https://google.com",
-            "imgProyecto": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_Homepage.svg/1024px-Google_Homepage.svg.png"
-        },
-        {
-            "id": 2,
-            "nombreProyecto": "App Futbol",
-            "descripcion": "Descripcion de App Futbol",
-            "urlProyecto": "https://www.victoriassecret.com/ar/",
-            "imgProyecto": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Victoria%27s_Secret_Store_9%2C_722_Lexington_Ave%2C_New_York%2C_NY_10022%2C_USA_-_Dec_2012.JPG/800px-Victoria%27s_Secret_Store_9%2C_722_Lexington_Ave%2C_New_York%2C_NY_10022%2C_USA_-_Dec_2012.JPG"
-        },
-        {
-            "id": 3,
-            "nombreProyecto": "App Basket",
-            "descripcion": "Descripcion de App Basket",
-            "urlProyecto": "https://es.wikipedia.org",
-            "imgProyecto": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Pagina_web_autoreferente.jpg/1024px-Pagina_web_autoreferente.jpg"
-        }
-    ]
+        "id": 3,
+        "nombreEmpresa": "Back Srl",
+        "esTrabajoActual": false,
+        "fechaInicio": "10/10/2018",
+        "fechaFin": "10/4/2019",
+        "descripcion": "Operario"
+    }
+],
+  "estudios": [
+    {
+      "id": 1,
+      "nombreInstituto": "UNGS",
+      "cursandoActualmente": true,
+      "fechaInicio": "10/10/2018",
+      "descripcion": "Ingenieria Electromecanica"
+    },
+    {
+      "id": 2,
+      "nombreInstituto": "Argentina Programa #YoProgramo",
+      "cursandoActualmente": false,
+      "fechaInicio": "1/04/2018",
+      "fechaFin": "10/10/2018",
+      "descripcion": "Desarrollador Full Stack"
+    },
+    {
+      "id": 3,
+      "nombreInstituto": "Fundamentos de la Programacion",
+      "cursandoActualmente": false,
+      "fechaInicio": "10/10/2018",
+      "fechaFin": "10/10/2018",
+      "descripcion": "UTN"
+    }
+  ],
+  "tecnologias": [
+    {
+      "id": 1,
+      "nombreTecnologia": "js",
+      "porcentaje": 25
+    },
+    {
+      "id": 2,
+      "nombreTecnologia": "html5",
+      "porcentaje": 100
+    },
+    {
+      "id": 3,
+      "nombreTecnologia": "css3-alt",
+      "porcentaje": 75
+    }
+  ],
+  "proyectos": [
+    {
+      "id": 1,
+      "nombreProyecto": "Portfolio",
+      "descripcion": "Descripcion de Portfolio",
+      "urlProyecto": "https://google.com",
+      "imgProyecto": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_Homepage.svg/1024px-Google_Homepage.svg.png"
+    },
+    {
+      "id": 2,
+      "nombreProyecto": "App Futbol",
+      "descripcion": "Descripcion de App Futbol",
+      "urlProyecto": "https://www.victoriassecret.com/ar/",
+      "imgProyecto": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Victoria%27s_Secret_Store_9%2C_722_Lexington_Ave%2C_New_York%2C_NY_10022%2C_USA_-_Dec_2012.JPG/800px-Victoria%27s_Secret_Store_9%2C_722_Lexington_Ave%2C_New_York%2C_NY_10022%2C_USA_-_Dec_2012.JPG"
+    },
+    {
+      "id": 3,
+      "nombreProyecto": "App Basket",
+      "descripcion": "Descripcion de App Basket",
+      "urlProyecto": "https://es.wikipedia.org",
+      "imgProyecto": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Pagina_web_autoreferente.jpg/1024px-Pagina_web_autoreferente.jpg"
+    }
+  ]
 }

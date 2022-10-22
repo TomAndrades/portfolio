@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Experiencia } from 'src/app/interfaces';
+import { DbmanagerService } from 'src/app/services/dbmanager.service';
 
 @Component({
   selector: 'app-experiencias',
@@ -6,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./experiencias.component.css']
 })
 export class ExperienciasComponent implements OnInit {
+  experiencias: Experiencia[] = [];
 
-  constructor() { }
+  constructor(private dbmanagerService: DbmanagerService) { }
 
   ngOnInit(): void {
+    //Get de las experiencias
+    this.dbmanagerService.getExperiencias().subscribe((experiencias) => (
+      this.experiencias = experiencias));
+  }
+
+  //Delete de las experiencias
+  deleteExperiencia(experiencia: Experiencia) {
+    this.dbmanagerService.deleteExperiencia(experiencia).subscribe(() => (
+      this.experiencias = this.experiencias.filter(t => t.id !== experiencia.id)
+    ))
   }
 
   toggleAddExperience() {

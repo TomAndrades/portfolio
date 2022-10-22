@@ -7,5 +7,9 @@
       (btnClick)="toggleAddExperience()"
     ></app-add-button>
   </div>
-  <app-experiencia></app-experiencia>
+  <app-experiencia
+    *ngFor="let exp of experiencias"
+    [item]="exp"
+    (onDeleteExperiencia)="deleteExperiencia(exp)"
+  ></app-experiencia>
 </div>

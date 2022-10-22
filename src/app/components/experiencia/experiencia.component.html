@@ -1,28 +1,37 @@
-<div *ngFor="let experiencia of experiencias">
-  <div class="d-flex flex-row">
-    <div class="flex-fill">
-      <h4>
-        {{ experiencia.nombreEmpresa }}
-      </h4>
-    </div>
-    <div class="pe-2">
-      <fa-icon [icon]="['fas', 'pen-to-square']" class="cruz"></fa-icon>
-    </div>
-    <div class="pe-2">
-      <fa-icon [icon]="['fas', 'trash']" class="cruz"></fa-icon>
-    </div>
+<div class="d-flex flex-row main">
+  <div class="flex-fill">
+    <h4>
+      {{ item.nombreEmpresa }}
+    </h4>
   </div>
 
-  <h6 *ngIf="experiencia.esTrabajoActual; else elseBlock">
-    {{ experiencia.fechaInicio | date: "dd/MM/yyyy" }} - Actualmente
+  <div class="pe-2">
+    <fa-icon
+      [icon]="['fas', 'pen-to-square']"
+      class="edit"
+      (click)="onEdit(item)"
+    ></fa-icon>
+  </div>
+  <div class="pe-2">
+    <fa-icon
+      [icon]="['fas', 'trash']"
+      class="delete"
+      (click)="onDelete(item)"
+    ></fa-icon>
+  </div>
+</div>
+
+<div>
+  <h6 *ngIf="item.esTrabajoActual; else elseBlock">
+    {{ item.fechaInicio | date: "dd/MM/yyyy" }} - Actualmente
   </h6>
   <ng-template #elseBlock>
     <h6>
-      {{ experiencia.fechaInicio | date: "dd/MM/yyyy" }} -
-      {{ experiencia.fechaFin | date: "dd/MM/yyyy" }}
+      {{ item.fechaInicio | date: "dd/MM/yyyy" }} -
+      {{ item.fechaFin | date: "dd/MM/yyyy" }}
     </h6>
   </ng-template>
   <p>
-    {{ experiencia.descripcion }}
+    {{ item.descripcion }}
   </p>
 </div>
