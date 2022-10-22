@@ -1,5 +1,18 @@
 <div *ngFor="let experiencia of experiencias">
-  <h4>{{ experiencia.nombreEmpresa }}</h4>
+  <div class="d-flex flex-row">
+    <div class="flex-fill">
+      <h4>
+        {{ experiencia.nombreEmpresa }}
+      </h4>
+    </div>
+    <div class="pe-2">
+      <fa-icon [icon]="['fas', 'pen-to-square']" class="cruz"></fa-icon>
+    </div>
+    <div class="pe-2">
+      <fa-icon [icon]="['fas', 'trash']" class="cruz"></fa-icon>
+    </div>
+  </div>
+
   <h6 *ngIf="experiencia.esTrabajoActual; else elseBlock">
     {{ experiencia.fechaInicio | date: "dd/MM/yyyy" }} - Actualmente
   </h6>
