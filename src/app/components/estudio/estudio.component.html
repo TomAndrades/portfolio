@@ -1,15 +1,35 @@
-<div *ngFor="let estudio of estudios">
-  <h4>{{ estudio.nombreInstituto }}</h4>
-  <h6 *ngIf="estudio.cursandoActualmente; else elseBlock">
-    {{ estudio.fechaInicio | date: "d/MM/yyyy" }} - Actualmente
-  </h6>
-  <ng-template #elseBlock>
-    <h6>
-      {{ estudio.fechaInicio | date: "d/MM/yyyy" }} -
-      {{ estudio.fechaFin | date: "d/MM/yyyy" }}
-    </h6>
-  </ng-template>
-  <p>
-    {{ estudio.descripcion }}
-  </p>
+<div class="d-flex flex-row main">
+  <div class="flex-fill">
+    <h4>
+      {{ estudio.nombreInstituto }}
+    </h4>
+  </div>
+
+  <div class="pe-2">
+    <fa-icon
+      [icon]="['fas', 'pen-to-square']"
+      class="edit"
+      (click)="onEdit(estudio)"
+    ></fa-icon>
+  </div>
+  <div class="pe-2">
+    <fa-icon
+      [icon]="['fas', 'trash']"
+      class="delete"
+      (click)="onDelete(estudio)"
+    ></fa-icon>
+  </div>
 </div>
+
+<h6 *ngIf="estudio.cursandoActualmente; else elseBlock">
+  {{ estudio.fechaInicio | date: "d/MM/yyyy" }} - Actualmente
+</h6>
+<ng-template #elseBlock>
+  <h6>
+    {{ estudio.fechaInicio | date: "d/MM/yyyy" }} -
+    {{ estudio.fechaFin | date: "d/MM/yyyy" }}
+  </h6>
+</ng-template>
+<p>
+  {{ estudio.descripcion }}
+</p>

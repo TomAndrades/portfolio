@@ -26,6 +26,10 @@ export class DbmanagerService {
     return this.http.delete<Experiencia>(url)
   }
 
+  deleteEstudio(estudio: Estudio): Observable<Estudio> {
+    const url = `${this.expUrl}/${estudio.id}`
+    return this.http.delete<Estudio>(url)
+  }
   getEstudios(): Observable<Estudio[]> {
     return this.http.get<Estudio[]>(this.estUrl)
   }

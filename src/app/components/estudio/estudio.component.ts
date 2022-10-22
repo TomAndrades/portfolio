@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { DbmanagerService } from '../../services/dbmanager.service';
 import { Estudio } from '../../interfaces';
 
@@ -8,14 +8,24 @@ import { Estudio } from '../../interfaces';
   styleUrls: ['./estudio.component.css']
 })
 export class EstudioComponent implements OnInit {
-  estudios: Estudio[] = [];
+
+  @Input() estudio: Estudio = { id: 1, nombreInstituto: 'a', fechaInicio: new Date(), fechaFin: new Date(), cursandoActualmente: true, descripcion: '' };
+  @Output() onDeleteEstudio: EventEmitter<Estudio> = new EventEmitter()
 
   constructor(
-    private experienciaService: DbmanagerService
+
   ) { }
 
   ngOnInit(): void {
-    this.experienciaService.getEstudios().subscribe((estudios) => (this.estudios = estudios))
+
   }
 
+  onEdit(item: Estudio) {
+    console.log(item);
+  };
+
+  onDelete(item: Estudio) {
+    this.onDeleteEstudio.emit(item);
+
+  }
 }

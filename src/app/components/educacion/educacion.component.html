@@ -7,5 +7,9 @@
       (btnClick)="toggleAddStudy()"
     ></app-add-button>
   </div>
-  <app-estudio></app-estudio>
+  <app-estudio
+    *ngFor="let est of estudios"
+    [estudio]="est"
+    (onDeleteEstudio)="deleteEstudio(est)"
+  ></app-estudio>
 </div>
