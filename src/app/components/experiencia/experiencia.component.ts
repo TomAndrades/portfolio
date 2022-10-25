@@ -10,7 +10,7 @@ import { Experiencia } from '../../interfaces';
 
 export class ExperienciaComponent implements OnInit {
 
-  @Input() item: Experiencia = { id: 1, nombreEmpresa: 'a', fechaInicio: new Date(), fechaFin: new Date(), esTrabajoActual: true, descripcion: '' };
+  @Input() item: Experiencia = { id: 1, nombreEmpresa: '', fechaInicio: new Date(), fechaFin: new Date(), esTrabajoActual: true, descripcion: '' };
   @Output() onDeleteExperiencia: EventEmitter<Experiencia> = new EventEmitter()
 
   constructor() { }

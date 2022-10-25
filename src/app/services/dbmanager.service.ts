@@ -1,7 +1,13 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHandler } from "@angular/common/http"
-import { Observable, of } from 'rxjs';
+import { HttpClient, HttpHeaders } from "@angular/common/http"
+import { Observable } from 'rxjs';
 import { Experiencia, Estudio, Tecnologia, Proyecto } from '../interfaces';
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json'
+  })
+}
 @Injectable({
   providedIn: 'root'
 })
@@ -24,6 +30,10 @@ export class DbmanagerService {
   deleteExperiencia(experiencia: Experiencia): Observable<Experiencia> {
     const url = `${this.expUrl}/${experiencia.id}`
     return this.http.delete<Experiencia>(url)
+  }
+
+  addExperiencia(experiencia: Experiencia): Observable<Experiencia> {
+    return this.http.post<Experiencia>(this.expUrl, experiencia, httpOptions)
   }
 
   deleteEstudio(estudio: Estudio): Observable<Estudio> {

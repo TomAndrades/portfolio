@@ -29,4 +29,9 @@ export class ExperienciasComponent implements OnInit {
     console.log("Agregar experiencia");
   }
 
+  agregarExperiencia(exp: Experiencia) {
+    this.dbmanagerService.addExperiencia(exp).subscribe((exp) =>
+      this.experiencias.push(exp))
+  }
+
 }

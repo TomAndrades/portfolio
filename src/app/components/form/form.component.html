@@ -1,0 +1,59 @@
+<form class="card border-warning p-3" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="nombreEmpresa">Nombre de la empresa</label>
+    <input
+      name="nombreEmpresa"
+      type="text"
+      class="form-control"
+      id="nombreEmpresa"
+      placeholder="Ingresa el nombre de una empresa"
+      [(ngModel)]="nombreEmpresa"
+    />
+  </div>
+  <div class="form-group">
+    <label for="fechaInicio">Fecha de Inicio</label>
+    <input
+      type="date"
+      class="form-control"
+      id="fechaI"
+      name="fechaInicio"
+      [(ngModel)]="fechaInicio"
+    />
+  </div>
+  <div class="form-check">
+    <input
+      type="checkbox"
+      class="form-check-input"
+      id="esTrabajoActual"
+      name="esTrabajoActual"
+      (click)="toggleTrabajoActual()"
+      [(ngModel)]="esTrabajoActual"
+    />
+    <label class="form-check-label" for="esTrabajoActual"
+      >Trabajas actualmente?</label
+    >
+  </div>
+  <div class="form-group">
+    <label for="fechaFin">Fecha de Final</label>
+    <input
+      type="date"
+      class="form-control"
+      id="fechaFin"
+      [(ngModel)]="fechaFin"
+      [disabled]="esTrabajoActual"
+      name="fechaFin"
+    />
+  </div>
+  <div class="form-group">
+    <label for="descripcion">Descripcion</label>
+    <input
+      type="text"
+      class="form-control"
+      id="descripcion"
+      name="descripcion"
+      placeholder="Ingresa una descripcion de las tareas realizadas en la empresa"
+      [(ngModel)]="descripcion"
+    />
+  </div>
+  <input type="submit" value="Agregar" class="btn" />
+</form>

@@ -7,6 +7,9 @@
       (btnClick)="toggleAddExperience()"
     ></app-add-button>
   </div>
+
+  <app-form (onAgregarExperiencia)="agregarExperiencia($event)"></app-form>
+
   <app-experiencia
     *ngFor="let exp of experiencias"
     [item]="exp"
