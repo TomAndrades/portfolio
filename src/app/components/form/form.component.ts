@@ -29,6 +29,10 @@ export class FormComponent implements OnInit {
       alert("Por favor agrega un nombre a la empresa!");
       return
     }
+    if (this.fechaFin < this.fechaInicio) {
+      alert("Ingrese una fecha de fin mayor a la de inicio");
+      return
+    }
     const { nombreEmpresa, fechaInicio, fechaFin, esTrabajoActual, descripcion } = this
     const nuevaExperiencia = { nombreEmpresa, fechaInicio, esTrabajoActual, fechaFin, descripcion }
     this.onAgregarExperiencia.emit(nuevaExperiencia);
