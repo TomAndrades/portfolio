@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { DbmanagerService } from '../../services/dbmanager.service';
 import { Estudio } from '../../interfaces';
 
 @Component({
@@ -9,7 +8,7 @@ import { Estudio } from '../../interfaces';
 })
 export class EstudioComponent implements OnInit {
 
-  @Input() estudio: Estudio = { id: 1, nombreInstituto: 'a', fechaInicio: new Date(), fechaFin: new Date(), cursandoActualmente: true, descripcion: '' };
+  @Input() item: Estudio = { id: 1, nombreInstituto: '', fechaInicio: new Date(), fechaFin: new Date(), cursandoActualmente: true, descripcion: '' };
   @Output() onDeleteEstudio: EventEmitter<Estudio> = new EventEmitter()
 
   constructor(

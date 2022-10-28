@@ -2,14 +2,20 @@
   <div class="c">
     <h1>Educacion</h1>
     <app-add-button
-      color="burlywood"
-      text="Agregar Estudio"
-      (btnClick)="toggleAddStudy()"
+      color="{{ showAgregarEstudio ? 'red' : 'green' }}"
+      text="{{ showAgregarEstudio ? 'Cerrar estudio' : 'Agregar estudio' }}"
+      (btnClick)="toggleAgregarEstudio()"
     ></app-add-button>
   </div>
+
+  <app-form
+    (onAgregarEstudio)="agregarEstudio($event)"
+    [trabajo]="false"
+  ></app-form>
+
   <app-estudio
     *ngFor="let est of estudios"
-    [estudio]="est"
+    [item]="est"
     (onDeleteEstudio)="deleteEstudio(est)"
   ></app-estudio>
 </div>

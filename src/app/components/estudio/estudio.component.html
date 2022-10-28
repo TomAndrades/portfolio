@@ -1,7 +1,7 @@
 <div class="d-flex flex-row main">
   <div class="flex-fill">
     <h4>
-      {{ estudio.nombreInstituto }}
+      {{ item.nombreInstituto }}
     </h4>
   </div>
 
@@ -9,27 +9,27 @@
     <fa-icon
       [icon]="['fas', 'pen-to-square']"
       class="edit"
-      (click)="onEdit(estudio)"
+      (click)="onEdit(item)"
     ></fa-icon>
   </div>
   <div class="pe-2">
     <fa-icon
       [icon]="['fas', 'trash']"
       class="delete"
-      (click)="onDelete(estudio)"
+      (click)="onDelete(item)"
     ></fa-icon>
   </div>
 </div>
 
-<h6 *ngIf="estudio.cursandoActualmente; else elseBlock">
-  {{ estudio.fechaInicio | date: "d/MM/yyyy" }} - Actualmente
+<h6 *ngIf="item.cursandoActualmente; else elseBlock">
+  {{ item.fechaInicio | date: "d/MM/yyyy" }} - Actualmente
 </h6>
 <ng-template #elseBlock>
   <h6>
-    {{ estudio.fechaInicio | date: "d/MM/yyyy" }} -
-    {{ estudio.fechaFin | date: "d/MM/yyyy" }}
+    {{ item.fechaInicio | date: "d/MM/yyyy" }} -
+    {{ item.fechaFin | date: "d/MM/yyyy" }}
   </h6>
 </ng-template>
 <p>
-  {{ estudio.descripcion }}
+  {{ item.descripcion }}
 </p>

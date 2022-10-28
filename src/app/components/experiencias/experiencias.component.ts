@@ -1,6 +1,8 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Experiencia } from 'src/app/interfaces';
 import { DbmanagerService } from 'src/app/services/dbmanager.service';
+import { UiService } from 'src/app/services/ui.service';
+import { Subscription } from "rxjs"
 
 @Component({
   selector: 'app-experiencias',
@@ -8,9 +10,15 @@ import { DbmanagerService } from 'src/app/services/dbmanager.service';
   styleUrls: ['./experiencias.component.css']
 })
 export class ExperienciasComponent implements OnInit {
-  experiencias: Experiencia[] = [];
 
-  constructor(private dbmanagerService: DbmanagerService) { }
+  experiencias: Experiencia[] = [];
+  showAgregarExperiencia: boolean = false;
+  subscription?: Subscription;
+
+  constructor(private dbmanagerService: DbmanagerService,
+    private uiService: UiService) {
+    this.subscription = this.uiService.onToggle().subscribe(value => this.showAgregarExperiencia = value);
+  }
 
   ngOnInit(): void {
     //Get de las experiencias
@@ -25,8 +33,8 @@ export class ExperienciasComponent implements OnInit {
     ))
   }
 
-  toggleAddExperience() {
-    console.log("Agregar experiencia");
+  toggleAgregarExperiencia() {
+    this.uiService.toggleAgregarExperiencia();
   }
 
   agregarExperiencia(exp: Experiencia) {

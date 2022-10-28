@@ -2,13 +2,18 @@
   <div class="c">
     <h1>Experiencias</h1>
     <app-add-button
-      color="burlywood"
-      text="Agregar Experiencia"
-      (btnClick)="toggleAddExperience()"
+      color="{{ showAgregarExperiencia ? 'red' : 'green' }}"
+      text="{{
+        showAgregarExperiencia ? 'Cerrar experiencia' : 'Agregar experiencia'
+      }}"
+      (btnClick)="toggleAgregarExperiencia()"
     ></app-add-button>
   </div>
 
-  <app-form (onAgregarExperiencia)="agregarExperiencia($event)"></app-form>
+  <app-form
+    (onAgregarExperiencia)="agregarExperiencia($event)"
+    [trabajo]="true"
+  ></app-form>
 
   <app-experiencia
     *ngFor="let exp of experiencias"

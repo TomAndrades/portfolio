@@ -1,59 +1,132 @@
-<form class="card border-warning p-3" (ngSubmit)="onSubmit()">
-  <div class="form-group">
-    <label for="nombreEmpresa">Nombre de la empresa</label>
-    <input
-      name="nombreEmpresa"
-      type="text"
-      class="form-control"
-      id="nombreEmpresa"
-      placeholder="Ingresa el nombre de una empresa"
-      [(ngModel)]="nombreEmpresa"
-    />
-  </div>
-  <div class="form-group">
-    <label for="fechaInicio">Fecha de Inicio</label>
-    <input
-      type="date"
-      class="form-control"
-      id="fechaI"
-      name="fechaInicio"
-      [(ngModel)]="fechaInicio"
-    />
-  </div>
-  <div class="form-check">
-    <input
-      type="checkbox"
-      class="form-check-input"
-      id="esTrabajoActual"
-      name="esTrabajoActual"
-      (click)="toggleTrabajoActual()"
-      [(ngModel)]="esTrabajoActual"
-    />
-    <label class="form-check-label" for="esTrabajoActual"
-      >Trabajas actualmente?</label
-    >
-  </div>
-  <div class="form-group">
-    <label for="fechaFin">Fecha de Final</label>
-    <input
-      type="date"
-      class="form-control"
-      id="fechaFin"
-      [(ngModel)]="fechaFin"
-      [disabled]="esTrabajoActual"
-      name="fechaFin"
-    />
-  </div>
-  <div class="form-group">
-    <label for="descripcion">Descripcion</label>
-    <input
-      type="text"
-      class="form-control"
-      id="descripcion"
-      name="descripcion"
-      placeholder="Ingresa una descripcion de las tareas realizadas en la empresa"
-      [(ngModel)]="descripcion"
-    />
-  </div>
-  <input type="submit" value="Agregar" class="btn" />
-</form>
+<div *ngIf="trabajo; else elseBlock">
+  <form
+    class="card border-warning p-3"
+    (ngSubmit)="onSubmit()"
+    *ngIf="showAgregarExperiencia"
+  >
+    <div class="form-group">
+      <label for="nombreEmpresa">Nombre de la Empresa</label>
+      <input
+        name="nombreEmpresa"
+        type="text"
+        class="form-control"
+        id="nombreEmpresa"
+        placeholder="Ingresa el nombre de una empresa"
+        [(ngModel)]="nombreEmpresa"
+      />
+    </div>
+    <div class="form-group">
+      <label for="fechaInicio">Fecha de Inicio</label>
+      <input
+        type="date"
+        class="form-control"
+        id="fechaI"
+        name="fechaInicio"
+        [(ngModel)]="fechaInicio"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="checkbox"
+        class="form-check-input"
+        id="esTrabajoActual"
+        name="esTrabajoActual"
+        (click)="toggleActual('trabajo')"
+        [(ngModel)]="esTrabajoActual"
+      />
+      <label class="form-check-label" for="esTrabajoActual"
+        >Trabajas actualmente?</label
+      >
+    </div>
+    <div class="form-group">
+      <label for="fechaFin">Fecha de Final</label>
+      <input
+        type="date"
+        class="form-control"
+        id="fechaFin"
+        [(ngModel)]="fechaFin"
+        [disabled]="esTrabajoActual"
+        name="fechaFin"
+      />
+    </div>
+    <div class="form-group">
+      <label for="descripcion">Descripcion</label>
+      <input
+        type="text"
+        class="form-control"
+        id="descripcion"
+        name="descripcion"
+        placeholder="Ingresa una descripcion"
+        [(ngModel)]="descripcion"
+      />
+    </div>
+    <input type="submit" value="Agregar" class="btn" />
+  </form>
+</div>
+
+<ng-template #elseBlock>
+  <form
+    class="card border-warning p-3"
+    (ngSubmit)="onSubmit()"
+    *ngIf="showAgregarEstudio"
+  >
+    <div class="form-group">
+      <label for="nombreInstituto">Nombre de la Institución</label>
+      <input
+        name="nombreInstituto"
+        type="text"
+        class="form-control"
+        id="nombreInstituto"
+        placeholder="Ingresa el nombre de una institución"
+        [(ngModel)]="nombreInstituto"
+      />
+    </div>
+    <div class="form-group">
+      <label for="fechaInicio">Fecha de Inicio</label>
+      <input
+        type="date"
+        class="form-control"
+        id="fechaI"
+        name="fechaInicio"
+        [(ngModel)]="fechaInicio"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="checkbox"
+        class="form-check-input"
+        id="cursandoActualmente"
+        name="cursandoActualmente"
+        (click)="toggleActual('estudio')"
+        [(ngModel)]="cursandoActualmente"
+      />
+
+      <label class="form-check-label" for="cursandoActualmente"
+        >Estudias actualmente?</label
+      >
+    </div>
+    <div class="form-group">
+      <label for="fechaFin">Fecha de Final</label>
+      <input
+        type="date"
+        class="form-control"
+        id="fechaFin"
+        [(ngModel)]="fechaFin"
+        [disabled]="cursandoActualmente"
+        name="fechaFin"
+      />
+    </div>
+    <div class="form-group">
+      <label for="descripcion">Descripcion</label>
+      <input
+        type="text"
+        class="form-control"
+        id="descripcion"
+        name="descripcion"
+        placeholder="Ingresa una descripcion"
+        [(ngModel)]="descripcion"
+      />
+    </div>
+    <input type="submit" value="Agregar" class="btn" />
+  </form>
+</ng-template>
